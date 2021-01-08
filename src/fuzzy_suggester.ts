@@ -130,7 +130,7 @@ export class TemplaterFuzzySuggestModal extends FuzzySuggestModal<TFile> {
             if (template === "" || cmd === "") {
                 continue;
             }
-            cmd = await replace_internal_command_templates(this.app, cmd);
+            content = await replace_internal_command_templates(this.app, cmd);
 
             if (content.contains(template)) {
                 try {
